@@ -3,55 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic HTML Page</title>
+    <title>Login Page</title>
     <style>
-        /* CSS styles can be added here */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+        .login-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 300px;
         }
-        .container {
-            width: 80%;
-            margin: auto;
+        .login-box h2 {
+            color: #333333;
+            margin-bottom: 20px;
         }
-        .main-content {
-            margin-top: 20px;
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
+        .login-box input[type="submit"] {
             width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .login-box p {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Welcome to My Basic HTML Page</h1>
-</header>
-
-<div class="container">
-    <section class="main-content">
-        <h2>Main Content Section</h2>
-        <p>This is where the main content of your page would go.</p>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2024 Your Name</p>
-</footer>
-
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
 </body>
 </html>
